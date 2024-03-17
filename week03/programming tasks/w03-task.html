@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 121b | W03: Programming Tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <nav>
+        <ul id="menu">
+            <li><a id="toggleMenu">&equiv;</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="w01-task.html">W1 Task</a></li>
+            <li><a href="w03-task.html" class="active">W3 Task</a></li>
+            <li><a href="w04-task.html">W4 Task</a></li>
+            <li><a href="w05-task.html">W5 Task</a></li>
+            <li><a href="project.html">Project</a></li>
+        </ul>
+    </nav>>
+    <header>
+        <h1>W03: Programming Tasks</h1>
+    </header>
+    <main id="task3">
+        <section id="section1">
+            <h2>Functions</h2>
+            <article>
+                <h3>Addition</h3>
+                <div>
+                    <label for="add1">Number 1:</label>
+                    <input type="text" id="add1" name="add1">
+                </div>
+                <div>
+                    <label for="add2">Number 2:</label>
+                    <input type="text" id="add2" name="add2">
+                </div>
+                <div>
+                    <input type="button" id="addNumbers" value="Add Numbers">
+                </div>
+                <div>
+                    <label for="sum">Sum:</label>
+                    <input type="text" id="sum" name="sum" disabled>
+                </div>
+            </article>
+            <article>
+                <h3>Subtraction</h3>
+                <div>
+                    <label for="subtract1">Number 1:</label>
+                    <input type="text" id="subtract1" name="subtract1">
+                </div>
+                <div>
+                    <label for="subtract2">Number 2:</label>
+                    <input type="text" id="subtract2" name="subtract2">
+                </div>
+                <div>
+                    <input type="button" id="subtractNumbers" value="Subtract Numbers">
+                </div>
+                <div>
+                    <label for="difference">Difference:</label>
+                    <input type="text" id="difference" name="difference" disabled>
+                </div>
+            </article>
+            <article>
+                <h3>Multiplication</h3>
+                <div>
+                    <label for="factor1">Number 1:</label>
+                    <input type="text" id="factor1" name="factor1">
+                </div>
+                <div>
+                    <label for="factor2">Number 2:</label>
+                    <input type="text" id="factor2" name="factor2">
+                </div>
+                <div>
+                    <input type="button" id="multiplyNumbers" value="Multiply Numbers">
+                </div>
+                <div>
+                    <label for="product">Product:</label>
+                    <input type="text" id="product" name="product" disabled>
+                </div>
+            </article>
+            <article>
+                <h3>Division</h3>
+                <div>
+                    <label for="dividend">Dividend:</label>
+                    <input type="text" id="dividend" name="dividend">
+                </div>
+                <div>
+                    <label for="divisor">Divisor:</label>
+                    <input type="text" id="divisor" name="divisor">
+                </div>
+                <div>
+                    <input type="button" id="divideNumbers" value="Divide Numbers">
+                </div>
+                <div>
+                    <label for="quotient">Quotient:</label>
+                    <input type="text" id="quotient" name="quotient" disabled>
+                </div>
+            </article>
+        </section>
+        <div>
+            <section id="section2">
+                <h2>Selection Structures</h2>
+                <label class="right">Subtotal:
+                    <input type="number" id="subtotal" size="5">
+                </label>
+                <label class="middle right">
+                    Club Member?
+                    <input type="checkbox" id="member">
+                </label>
+                <div class="right">
+                    <input type="button" id="getTotal" value="Get Total Due">
+                </div>
+                <div class="right">Total:
+                    <span class="larger" id="total">$ --.--</span>
+                </div>
+            </section>
+            <section id="section3">
+                <h2>Array Methods</h2>
+                <p>
+                    Source Array: <span id="array"></span>
+                </p>
+                <p>
+                    Odd Numbers: <span id="odds"></span>
+                </p>
+                <p>
+                    Even Numbers: <span id="evens"></span>
+                </p>
+                <p>
+                    Sum of Source Array: <span id="sumOfArray"></span>
+                </p>
+                <p>
+                    Source Array Times Two: <span id="multiplied"></span>
+                </p>
+                <p>
+                    Sum of Source Array Times Two: <span id="sumOfMultiplied"></span>
+                </p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        &copy;<span id="year"></span> | CSE 121b | Task 03
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    <script src="scripts/w03-task.js"></script>
+</body>
+
+</html>
