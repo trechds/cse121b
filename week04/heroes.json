@@ -1,0 +1,37 @@
+{
+    "squadName": "Super hero squad",
+    "homeTown": "Marau RS",
+    "formed": 2024,
+    "secretBase": "Super tower",
+    "active": true,
+    "members": [
+      {
+        "name": "Molecule Dog",
+        "age": 3,
+        "secretIdentity": "Luke",
+        "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+      },
+      {
+        "name": "Madame Uppercut",
+        "age": 22,
+        "secretIdentity": "Luiza Rech",
+        "powers": [
+          "Million tonne punch",
+          "Damage resistance",
+          "Superhuman reflexes"
+        ]
+      },
+      {
+        "name": "Eternal Flame",
+        "age": 1000000,
+        "secretIdentity": "Thiago Rech",
+        "powers": [
+          "Immortality",
+          "Heat Immunity",
+          "Celestial Light",
+          "Teleportation",
+          "Interdimensional travel"
+        ]
+      }
+    ]
+  }

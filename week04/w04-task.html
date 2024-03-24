@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSE 121b | W04: Programming Tasks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <nav>
+    <ul id="menu">
+      <li><a id="toggleMenu">&equiv;</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="w01-task.html">W1 Task</a></li>
+      <li><a href="w03-task.html">W3 Task</a></li>
+      <li><a href="w04-task.html" class="active">W4 Task</a></li>
+      <li><a href="w05-task.html">W5 Task</a></li>
+      <li><a href="project.html">Project</a></li>
+    </ul>
+  </nav>
+  <main id="home">
+    <picture>
+      <img id="photo" src="images/placeholder.png" alt="Placeholder Image">
+    </picture>
+    <section>
+      <h1>About Me<br>• &nbsp;<span id="name"></span>&nbsp; •</h1>
+      <h2>Favorite Foods</h2>
+      <ul id="favorite-foods"></ul>
+      <h2>Hobbies</h2>
+      <ul id="hobbies"></ul>
+      <h2>Places Lived</h2>
+      <dl id="places-lived"></dl>
+    </section>
+  </main>
+
+  <footer>
+    &copy;<span id="year"></span> | Week 04 - Biography | CSE 121b
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <script src="scripts/w04-task.js"></script>
+</body>
+
+</html>
