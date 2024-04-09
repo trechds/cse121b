@@ -1,0 +1,757 @@
+/************* HOME PAGE *************/
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Merienda&family=Noto+Serif&family=Playpen+Sans&family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif, Arial;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    /*background: linear-gradient(to right, #4e1f4c, #1f1c50);*/
+    color: #010101;
+}
+
+header {
+    background-color: #132c48;
+    padding: 30px;
+    border-radius: 50px;
+    margin: 20px 50px 0 50px;  
+}
+
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 10em;
+    height: auto;
+    margin-top: -15px;
+    margin-bottom: -18px;
+    margin-left: 50px;
+    margin-right: -50px;
+}
+
+.nav-buttons a {
+    background-color: #629904;
+    color: #ffffff;
+    padding: 15px 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: #6f7364;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.contact-link {
+    color: #ffffff;
+    margin-right: 50px;
+    margin-left: -50px;
+    font-size: 18px;
+}
+
+.contact-link:hover,
+.read-more:hover,
+#contactus-link:hover, 
+#site-plan:hover {
+    color: #629904;
+}
+
+.main-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.company-logo {
+    width: 25em;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: -30px;
+}
+
+.separator-line {
+    border-top: 3px solid #11113a;
+    width: 95%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin: 20px auto;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    text-align: left;
+}
+
+.grid-item img {
+    margin-left: 80px;
+    border: solid #28286a;
+    border-radius: 5px;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.grid-item p, h2 {
+    margin-right: 80px;
+}
+
+.other-services {
+    margin-bottom: 80px;
+    text-align: center; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.other-services img {
+    width: 18em;
+    height: auto;
+    margin-bottom: 20px;
+    border: solid #28286a;
+    border-radius: 5px;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.other-services img:hover,
+.logo:hover {     
+    transform: scale(1.1);
+}
+
+.other-services h2,
+.other-services p {
+    text-align: center;
+}
+
+.other-services p {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.why-titles {
+    margin: 0;
+}
+
+h1 {
+    color: #28286a;
+    font-family: 'Merienda', 'Roboto', Arial;
+}
+
+h2, h3 {
+    color: #28286a;
+    font-family: 'Courgette', 'Roboto', Arial;
+}
+
+p {
+    font-family: 'Roboto', sans-serif, Arial;
+    color: #11113a;
+}
+
+.second-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #132c48;
+    padding: 20px 0;
+    color: #ffffff;
+}
+
+#footer-content {
+    display: grid;
+    grid-template-columns: 10fr 1fr; 
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer-texts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 2; 
+}
+
+.footer-texts p {
+    margin-right: 20px;
+    margin: 0;
+}
+
+.footer-texts a, .footer-liks a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+    text-align: center;
+}
+
+#site-plan, #contactus-link, .contact-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#site-plan {
+    margin-right: auto; 
+}
+
+#copyright {
+    margin: 0; 
+    color: white;
+}
+
+#contactus-link {
+    margin-left: auto; 
+}
+
+#social, .footer-liks {
+    display: flex;
+    gap: 10px; 
+    align-items: center;
+    justify-content: right;
+    margin-right: 60px;
+    margin-left: -100px;
+}
+
+#social a, .footer-liks a {
+    display: inline-block; 
+}
+
+#social img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 50px; 
+    right: 10px;
+  }
+  
+  .whatsapp-icon img {
+    width: 45px; 
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+.social-media:hover, .whatsapp-icon:hover {
+    opacity: .8;
+    transform: scale(1.1);
+    transition: transform.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/************* ELETRICITY PAGE *************/
+
+#grid-content-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+#categories {
+    margin-left: 80px;
+}
+
+.category-box {
+    text-align: center;
+}
+
+.category-box img {
+    width: 400px;
+    height: auto;
+    border: solid #28286a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.category-box img:hover {
+    opacity: .8;
+    transform: scale(1.1);
+    transition: transform.5s;
+}
+
+.place-description {
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
+}
+
+.place-title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 23px;
+}
+
+#content-2 {
+    text-align: center;
+}
+
+.kind-of-service-box {
+    margin-bottom: 20px;
+}
+
+.service-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.service-button {
+    background-color: #28286a;
+    color: #ffffff;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.service-button:hover {
+    opacity: .8;
+}
+
+.service-button.selected {
+    background-color: #629904;
+    color: #ffffff;
+}
+
+.slideshow {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.slide-image {
+    width: 100%;
+    display: none;
+    border: solid #28286a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.slide-image:hover,
+.solar-image-1:hover,
+.solar-image-2:hover,
+.technology img:hover  {
+    opacity: .8;
+    transition: transform.5s;
+}
+
+.service-info-box {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background-color: #132c48;
+    border: solid #629904;
+    border-radius: 8px;
+    margin: 30px 100px 60px 100px;
+}
+
+.service-info-box p {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/************* SOLAR PAGE *************/
+
+#solar-main {
+    text-align: center;
+    margin: 20px;
+}
+
+.solar-header {
+    text-align: left;
+    margin-left: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #28286a;
+}
+
+.solar-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    gap: 20px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.solar-info {
+    margin-right: 5px;
+    width: 600px;
+    height: auto;
+}
+
+.solar-info h2 {
+    color: #28286a;
+    margin-left: 50px;
+}
+
+.solar-image-1 {
+    width: 230px;
+    height: auto;
+    border: solid #28286a;
+    border-radius: 5px;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.solar-image-2 {
+    width: auto;
+    height: 230px;
+    border: solid #28286a;
+    border-radius: 5px;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+
+.technology {
+    margin-left: 40px;
+    padding-right: 50px;
+    border-right: solid 3px #11113a;
+}
+
+.technology h3, p {
+    padding-left: 30px;
+}
+
+.technology img {
+    border: solid #28286a;
+    border-radius: 5px;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+    width: 650px;
+    height: auto;
+}
+
+#img-solar-inverter {
+    width: 200px;
+    height: auto;
+}
+
+#img-solar-panel {
+    width: auto;
+    height: 500px;
+}
+
+.solar-image:hover {
+    transform: scale(1.1);
+}
+
+.solar-title {
+    margin-top: 10px;
+    color: #28286a;
+    text-align: center;
+}
+
+.solar-panel-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+    align-items: flex-end;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.solar-panel-title {
+    color: #28286a;
+    margin-right: 0;
+    text-align: center;
+}
+
+.solar-panel-button:hover,
+.solar-inverter-button:hover {
+    background-color: #629904;
+}
+
+.solar-panel-button, .solar-inverter-button {
+    background-color: #28286a;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 50px;
+    width: 200px;
+}
+
+.solar-panel-button {
+    justify-content: center;
+    margin-left: 110px;
+}
+
+.solar-panel-info, .solar-inverter-info {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.solar-panel-info h1 {
+    padding-bottom: 180px;
+}
+
+.solar-panel-description1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    color: #28286a;
+    text-align: center;
+}
+
+.solar-panel-description2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-right: 40px;
+    color: #28286a;
+    text-align: center;
+}
+
+.solar-form-section {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.solar-form-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28286a;
+    text-align: center;
+    padding-right: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.solar-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+    max-width: 50em;
+    margin: 0 auto;
+}
+
+
+.solar-form-submit {
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.solar-form-label {
+    margin-bottom: 5px;
+    color: #28286a;
+    text-align: center;
+}
+
+.solar-form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.solar-form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.solar-form-submit {
+    background-color: #28286a;
+    color: #ffffff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    grid-column: span 2;
+}
+
+.solar-form-submit:hover {
+    background-color: #629904;
+}
+
+.budget-message {
+    grid-column: span 2;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+/************* CONTACT US *************/
+
+.card p {
+    padding-left: 0;
+}
+
+.card p a {
+    padding-left: 110px;
+    padding-right: 110px;
+    background-color: #132c48;
+    color: #ffffff; 
+    border: solid #28286a;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+    header {
+        padding: 20px;
+        border-radius: 20px;
+        margin: 10px;
+    }
+
+    .logo {
+        width: 8em;
+        margin-top: -10px;
+        margin-bottom: -15px;
+    }
+
+    .nav-buttons a {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .nav-link {
+        padding: 10px 20px;
+        font-size: 14px;
+        margin: 10px;
+    }
+
+    .contact-link {
+        font-size: 16px;
+        margin-right: 10px;
+        margin-left: -10px;
+    }
+
+    .separator-line {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .solar-section {
+        grid-template-columns: 1fr;
+    }
+
+    .solar-info,
+    .montador,
+    .solar-panel-info,
+    #solar-inverter-info {
+        width: 100%;
+    }
+
+    .technology img,
+    .solar-image-1,
+    .solar-image-2,
+    #img-solar-inverter,
+    #img-solar-panel {
+        width: 100%;
+        height: auto;
+    }
+
+    .solar-form,
+    .solar-form-input,
+    .solar-form-textarea,
+    .solar-form-submit {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .footer-texts {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #site-plan,
+    #contactus-link,
+    .contact-link {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    #social {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .whatsapp-icon {
+        right: 5px;
+    }
+
+    .whatsapp-icon img {
+        width: 40px;
+    }
+}
