@@ -1,14 +1,6 @@
 // Importa a função openPopup do arquivo popup.js
 import { openPopup } from './popup.js';
 
-// Função para carregar dados JSON de forma assíncrona
-async function loadJSON(filename) {
-    const response = await fetch(filename);
-    const data = await response.json();
-    console.log(`Loaded JSON from ${filename}:`, data);
-    return data;
-}
-
 // Adiciona listeners para o evento 'DOMContentLoaded'
 document.addEventListener("DOMContentLoaded", async function () {
     // Carrega dados dos arquivos JSON
