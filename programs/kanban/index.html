@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kanban</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <h1>Kanban</h1>
+    <form id="add-task-form">
+      <p>Create a new task:</p>
+      <input type="text" placeholder="Digite o título..." />
+      <button type="submit">Create</button>
+    </form>
+    <div class="kanban">
+      <div class="column">
+        <h2>To do</h2>
+        <ul class="tasks" id="todo">
+          <li draggable="true">Task 1</li>
+          <li draggable="true">Task 2</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>In progress</h2>
+        <ul class="tasks" id="doing">
+          <li draggable="true">Task 3</li>
+          <li draggable="true">Task 4</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h2>Done</h2>
+        <ul class="tasks" id="done">
+          <li draggable="true">Task 5</li>
+          <li draggable="true">Task 6</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Add new features -->
+    <div id="toolbar">
+      <h3>Search:</h3>
+      <input type="text" id="search-input" placeholder="Search tasks..." />
+      <h3>Filter:</h3>
+      <select id="filter-select">
+        <option value="all">All</option>
+        <option value="todo">To do</option>
+        <option value="doing">In progress</option>
+        <option value="done">Done</option>
+      </select>
+    </div>
+  </body>
+</html>
