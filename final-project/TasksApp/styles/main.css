@@ -8,10 +8,12 @@
   }
   
   body {
-    background-image: url("../images/bg.jpg");
+    background-image: url("../images/lds-temple.jpg");
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
   }
+  
   
   button {
     background-color: #fdfdfd;

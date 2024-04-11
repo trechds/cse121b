@@ -1,7 +1,32 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Importa a função openPopup do arquivo popup.js
+import { openPopup } from './popup.js';
+
+// Função para carregar dados JSON de forma assíncrona
+async function loadJSON(filename) {
+    const response = await fetch(filename);
+    const data = await response.json();
+    console.log(`Loaded JSON from ${filename}:`, data);
+    return data;
+}
+
+// Adiciona listeners para o evento 'DOMContentLoaded'
+document.addEventListener("DOMContentLoaded", async function () {
+    // Carrega dados dos arquivos JSON
+    const modulesData = await loadJSON('modules.json');
+    const invertersData = await loadJSON('inverters.json');
+
+    // Seleciona elementos DOM
     const slideshowImages = document.querySelectorAll(".slide-image");
     const buttons = document.querySelectorAll(".service-button");
     const serviceInfoBox = document.querySelector(".service-info-box");
+    const form = document.getElementById("solar-form");
+
+    // Adiciona listener para o botão 'SELECT INVERTER'
+    const selectButton = document.querySelector('.solar-inverter-button');
+    selectButton.addEventListener('click', () => {
+        console.log('Button clicked!');
+        openPopup(modulesData, invertersData);
+    });
 
     // Textos correspondentes aos serviços corretivo e preventivo
     const serviceTexts = [
@@ -10,33 +35,29 @@ document.addEventListener("DOMContentLoaded", function () {
         "Explore preventive electrical services at AR TEC. Our team is committed to proactively maintaining and safeguarding your electrical systems. From routine inspections to preventative measures, we focus on minimizing risks and ensuring the long-term reliability of your electrical infrastructure. Partner with us for proactive solutions that enhance the performance and longevity of your electrical systems."
     ];
 
+    // Função para atualizar o slide e o texto de acordo com o botão selecionado
     function updateSlide(index) {
         slideshowImages.forEach((image, i) => {
-            if (i === index) {
-                image.style.display = "block";
-            } else {
-                image.style.display = "none";
-            }
+            image.style.display = (i === index) ? "block" : "none";
         });
-
-        // Atualiza o texto no service-info-box
         serviceInfoBox.innerHTML = `<p>${serviceTexts[index]}</p>`;
     }
 
+    // Adiciona listeners para os botões de serviço
     buttons.forEach((button, index) => {
-        button.addEventListener("click", function () {       
-            buttons.forEach((btn) => btn.classList.remove("selected"));         
+        button.addEventListener("click", function () {
+            buttons.forEach((btn) => btn.classList.remove("selected"));
             button.classList.add("selected");
             updateSlide(index);
         });
     });
 
-    // Adiciona a caixa retangular ao fundo de service-info-box
+    // Cria um elemento para o fundo de service-info-box
     const backgroundBox = document.createElement("div");
     backgroundBox.classList.add("background-box");
     document.body.appendChild(backgroundBox);
 
-    // Função para esconder a caixa retangular quando um botão é clicado
+    // Esconde o fundo de service-info-box quando um botão é clicado
     function hideBackgroundBox() {
         backgroundBox.style.display = "none";
     }
@@ -45,11 +66,12 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", hideBackgroundBox);
     });
 
-    // Inicialmente, mostra a primeira imagem e destaca o primeiro botão
+    // Inicialmente, mostra o primeiro slide e destaca o primeiro botão
     updateSlide(0);
     buttons[0].classList.add("selected");
 });
 
+// Adiciona listener para o evento 'submit' do formulário
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("solar-form");
 
@@ -72,24 +94,17 @@ document.addEventListener("DOMContentLoaded", function() {
             message: message
         };
 
-        // Converte o objeto em formato JSON
-        const jsonData = JSON.stringify(formData, null, 2);
-
-        // Cria um novo Blob com o conteúdo JSON
-        const blob = new Blob([jsonData], { type: "application/json" });
-
-        // Cria um link para fazer o download do arquivo JSON
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "form_data.json";
-        document.body.appendChild(a);
-        a.click();
-
-        // Limpa o URL criado
-        setTimeout(() => {
-            URL.revokeObjectURL(url);
-            document.body.removeChild(a);
-        }, 0);
+        // Envia os dados do formulário para o servidor via AJAX
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "save_data.php"); // Substitua "save_data.php" pelo caminho para o script do servidor que lidará com a solicitação
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                console.log("Data saved successfully.");
+            } else {
+                console.error("Failed to save data.");
+            }
+        };
+        xhr.send(JSON.stringify(formData));
     });
 });
