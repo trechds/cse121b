@@ -177,18 +177,11 @@ featureImage.forEach((img) => imageObserver.observe(img));
 //////////////////////////////////
 // Load testimonials and slider animations
 document.addEventListener('DOMContentLoaded', function () {
-  const slides = document.querySelectorAll(".slide");
-  const btnNext = document.querySelector(".slider__btn--right");
-  const btnPrev = document.querySelector(".slider__btn--left");
-  const dotContainer = document.querySelector(".dots");
-
-  loadTestimonials(); // Carrega os testemunhos
-
-  // Check if all required elements are found
-  if (slides.length > 0 && btnNext && btnPrev && dotContainer) {
-    // All elements are found, proceed with slider initialization
-    slider();
-  } else {
-    console.error("Slider initialization failed ####: One or more elements not found.");
-  }
+  loadTestimonials()
+    .then(() => {
+      slider();
+    })
+    .catch(error => {
+      console.error('Error loading testimonials:', error);
+    });
 });

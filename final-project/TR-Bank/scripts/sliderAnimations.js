@@ -15,16 +15,16 @@ const slider = function () {
 
     //Next Slide
     const nextSlide = function () {
-    curSlide === maxSlide - 1 ? (curSlide = 0) : curSlide++;
-    goToSlide(curSlide);
-    activateDot(curSlide);
+        curSlide === maxSlide - 1 ? (curSlide = 0) : curSlide++;
+        goToSlide(curSlide);
+        activateDot(curSlide);
     };
 
     //Previous Slide
     const prevSlide = function () {
-    curSlide === 0 ? (curSlide = maxSlide - 1) : curSlide--;
-    goToSlide(curSlide);
-    activateDot(curSlide);
+        curSlide === 0 ? (curSlide = maxSlide - 1) : curSlide--;
+        goToSlide(curSlide);
+        activateDot(curSlide);
     };
 
     const createDots = function () {
