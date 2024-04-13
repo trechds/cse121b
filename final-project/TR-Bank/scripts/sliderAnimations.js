@@ -1,10 +1,9 @@
 // sliderAnimations.js
 const slider = function () {
-    const slides = document.querySelectorAll(".slide");
-    const btnNext = document.querySelector(".slider__btn--right");
-    const btnPrev = document.querySelector(".slider__btn--left");
-    const dotContainer = document.querySelector(".dots");
-
+    const slides = document.querySelectorAll('.slide')
+    const btnNext = document.querySelector('.slider__btn--right');
+    const btnPrev = document.querySelector('.slider__btn--left');
+    const dotContainer = document.querySelector('.dots');
     let curSlide = 0;
     const maxSlide = slides.length;
 
@@ -14,12 +13,14 @@ const slider = function () {
     );
     };
 
+    //Next Slide
     const nextSlide = function () {
     curSlide === maxSlide - 1 ? (curSlide = 0) : curSlide++;
     goToSlide(curSlide);
     activateDot(curSlide);
     };
 
+    //Previous Slide
     const prevSlide = function () {
     curSlide === 0 ? (curSlide = maxSlide - 1) : curSlide--;
     goToSlide(curSlide);
@@ -70,11 +71,13 @@ const slider = function () {
             btnNext.addEventListener("click", nextSlide);
             btnPrev.addEventListener("click", prevSlide);
     
+            // Keyboard pressing
             document.addEventListener("keydown", function (e) {
                 if (e.key === "ArrowRight") nextSlide();
                 if (e.key === "ArrowLeft") prevSlide();
             });
-    
+
+            // Event
             dotContainer.addEventListener("click", function (e) {
                 if (e.target.classList.contains("dots__dot")) {
                     const slide = e.target.dataset.slide;
