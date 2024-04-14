@@ -38,10 +38,10 @@ const slider = function () {
     
         // Now you can insert dots into the dynamically created dot container
         slides.forEach(function (_, i) {
-        dotContainer.insertAdjacentHTML(
-            "beforeend",
-            `<button class="dots__dot" data-slide="${i}"></button>`
-        );
+            dotContainer.insertAdjacentHTML(
+                "beforeend",
+                `<button class="dots__dot" data-slide="${i}"></button>`
+            );
         });
     };
 
